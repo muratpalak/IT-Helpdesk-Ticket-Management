@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#edf0ed" />
+  <title>NexaDesk Glass — IT Helpdesk & Ticket Management</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></symbol>
+    <symbol id="i-ticket" viewBox="0 0 24 24"><path d="M4 7h16v4a2 2 0 0 0 0 4v4H4v-4a2 2 0 0 0 0-4V7Z"/><path d="M12 7v2m0 3v2m0 3v2"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V12m6 8V5m6 15v-8m4 8H2"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 8-3 9h18c0-1-3-2-3-9m-8 12a2 2 0 0 0 4 0"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v13m-5-5 5 5 5-5M4 17v4h16v-4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 20a7 7 0 0 1 14 0M17 4a4 4 0 0 1 0 8m1 3a6 6 0 0 1 4 5"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M5 5 19 19M19 5 5 19"/></symbol>
+    <symbol id="i-activity" viewBox="0 0 24 24"><path d="M2 12h5l3-8 4 16 3-8h5"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-9v1"/></symbol>
+  </svg>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">n<span class="brand-star">✳</span></span><span class="brand-word">nexa<span>desk</span><small>THE SERVICE STUDIO</small></span></div>
+      <div class="workplace"><div class="workspace-avatar">N</div><span><strong>Nexa IT Services</strong><small>Personal workspace</small></span><span class="workplace-chevron">⌄</span></div>
+      <div class="nav-label">WORKSPACE</div>
+      <nav class="nav-list" aria-label="Main navigation">
+        <button class="nav-item is-active" data-view="overview"><svg class="ico"><use href="#i-grid"/></svg> Overview</button>
+        <button class="nav-item" data-view="tickets"><svg class="ico"><use href="#i-ticket"/></svg> All tickets <span class="nav-count" id="nav-count">10</span></button>
+        <button class="nav-item" data-view="myqueue"><svg class="ico"><use href="#i-users"/></svg> Unassigned queue</button>
+        <button class="nav-item" data-view="reports"><svg class="ico"><use href="#i-chart"/></svg> Reports</button>
+      </nav>
+      <div class="nav-label nav-label-secondary">QUICK ACTIONS</div>
+      <button class="nav-item" id="new-nav"><svg class="ico"><use href="#i-plus"/></svg> Create a ticket</button>
+      <div class="sidebar-bottom">
+        <div class="sidebar-help"><span class="help-top"><span class="help-icon"><svg class="ico"><use href="#i-info"/></svg></span><span class="help-dots">•••</span></span><strong>Designed for clarity.</strong><p>A little calm for your daily support workflow.</p><span class="demo-pill"><span class="status-bead"></span> DEMO MODE</span></div>
+        <div class="sidebar-profile"><div class="profile-avatar">DA</div><div><strong>Demo Agent</strong><small>IT Support Specialist</small></div><span class="online-dot"></span></div>
+      </div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar">
+        <button class="mobile-menu" id="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <div class="breadcrumb"><span>Workspace</span><svg class="ico small"><use href="#i-chevron"/></svg><strong id="breadcrumb-view">Overview</strong></div>
+        <div class="top-actions"><span class="ambient-label"><span class="ambient-orb"></span> All systems ready</span><span class="top-divider"></span><div class="top-profile"><span class="mini-avatar">DA</span><span>Demo Agent</span></div></div>
+      </header>
+      <div class="page-content" id="page-content"></div>
+      <footer class="page-footer"><span>© 2026 NexaDesk <span class="foot-dot">·</span> A thoughtfully made portfolio demo</span><span>Python · FastAPI · SQLite · Vanilla JS</span></footer>
+    </main>
+  </div>
+  <div class="overlay hidden" id="overlay"></div>
+  <aside class="drawer hidden" id="drawer" aria-modal="true" role="dialog" aria-label="Ticket details"><div id="drawer-content"></div></aside>
+  <div class="modal-backdrop hidden" id="modal-backdrop"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-header"><div><div class="eyebrow">SERVICE DESK</div><h2 id="modal-title">Create new ticket</h2><p>Log a support request and automatically calculate the priority.</p></div><button class="icon-button" id="close-modal" aria-label="Close"><svg class="ico"><use href="#i-x"/></svg></button></div><form id="new-ticket-form"><div class="modal-body"><label>Subject <span>*</span><input name="subject" required minlength="5" maxlength="120" placeholder="e.g. Cannot connect to VPN" /></label><label>Description <span>*</span><textarea name="description" required minlength="10" maxlength="2000" rows="3" placeholder="Describe the issue, affected device, steps already tried..."></textarea></label><div class="form-grid"><label>Requester <span>*</span><input name="requester" required minlength="2" placeholder="Full name" /></label><label>Email <span>*</span><input name="requester_email" type="email" required placeholder="name@example.com" /></label></div><div class="form-grid"><label>Category <span>*</span><select name="category" id="new-category" required></select></label><label>Assign to <span class="optional">optional</span><select name="assignee" id="new-assignee"></select></label></div><div class="form-grid"><label>Impact <span>*</span><select name="impact" id="new-impact"><option value="low">Low — one user</option><option value="medium" selected>Medium — small team</option><option value="high">High — many users</option></select></label><label>Urgency <span>*</span><select name="urgency" id="new-urgency"><option value="low">Low — can wait</option><option value="medium" selected>Medium — soon</option><option value="high">High — immediate</option></select></label></div><div class="priority-preview"><span><svg class="ico"><use href="#i-activity"/></svg> Calculated priority</span><strong id="preview-priority">P3 · Medium</strong><small>Based on business impact and urgency</small></div></div><div class="modal-footer"><button type="button" class="btn btn-muted" id="cancel-modal">Cancel</button><button type="submit" class="btn btn-primary"><svg class="ico"><use href="#i-plus"/></svg> Create ticket</button></div></form></div></div>
+  <div class="toast-container" id="toasts" role="status" aria-live="polite"></div>
+  <script defer src="/static/app.js"></script>
+</body>
+</html>
