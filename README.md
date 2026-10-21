@@ -1,5 +1,20 @@
 # NexaDesk Glass · IT Helpdesk & Ticket Management
 
+<!-- BEGIN: INTERNATIONAL PORTFOLIO SUMMARY -->
+
+[![CI status](https://github.com/muratpalak/IT-Helpdesk-Ticket-Management/actions/workflows/tests.yml/badge.svg)](https://github.com/muratpalak/IT-Helpdesk-Ticket-Management/actions/workflows/tests.yml)
+
+**International portfolio overview / Internationale Projektübersicht**
+
+**EN:** Local helpdesk demo covering ticket intake, priority matrix, assignment, status transitions and CSV export. **Tech:** FastAPI · SQLite · JavaScript · Ticket workflow. This is a portfolio/demo project; read its limitations before real-world use.
+
+**DE:** Lokales Service-Desk-Demo mit Ticketaufnahme, Priorisierung, Zuweisung, Statusworkflow und CSV-Export.
+
+**[Technical case study / Technische Projektbeschreibung](docs/PORTFOLIO_CASE_STUDY.md)** · [Automated checks](https://github.com/muratpalak/IT-Helpdesk-Ticket-Management/actions/workflows/tests.yml)
+
+<!-- END: INTERNATIONAL PORTFOLIO SUMMARY -->
+
+
 A functional, locally hosted service desk portfolio demo with an elegant frosted-glass interface. Version 2.0 takes visual inspiration from softly lit physical controls: ceramic surfaces, floating oval action buttons, tactile segmented filters, calm neutral tones, and warm peach highlights.
 
 ## What works
