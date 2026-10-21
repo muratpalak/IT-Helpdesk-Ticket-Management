@@ -1,5 +1,18 @@
 # NexaDesk Glass · IT Helpdesk & Ticket Management
 
+<!-- BEGIN: SUPPORT SCENARIOS / IT SUPPORT EVIDENCE -->
+
+## IT Support scenarios / Praxisfälle / Destek senaryoları
+
+**[Read the step-by-step scenarios](docs/SUPPORT_SCENARIOS.md)** — Ticket triage: Wi-Fi / DHCP incident and priority handling.
+
+**DE:** Praxisfälle: Ticketpriorisierung, Zuweisung und Dokumentation. · **TR:** Örnek destek vakaları; belirtiler, kontrol adımları ve test kanıtları.
+
+> These are **fictional, reproducible portfolio scenarios**, not real client incidents.
+
+<!-- END: SUPPORT SCENARIOS / IT SUPPORT EVIDENCE -->
+
+
 <!-- BEGIN: REAL APPLICATION PREVIEW -->
 
 ## Interface preview / Benutzeroberfläche
